@@ -20,7 +20,7 @@ export const Output = () => {
   return (
     <div className="rounded shadow p-3 bg-neutral-800 flex justify-between items-center w-full text-neutral-200">
       <h1>{state.password || <p className="opacity-25">######</p>}</h1>
-      <p onClick={handleClick} className="hover:text-sky-600">
+      <p onClick={handleClick} className="hover:text-sky-600 bg-neutral-800">
         <MdContentCopy />
       </p>
     </div>
