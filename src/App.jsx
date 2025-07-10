@@ -1,23 +1,26 @@
-import { useState } from "react";
+
+import React, { useEffect, useState } from 'react';
 import "./App.css";
-import { Output } from "./components/Output";
-import { Control } from "./components/Control";
-import { GenerateBtn } from "./components/GenerateBtn";
-import { PasswordProvider } from "./components/PasswordProvider";
+import { Input } from './components/Input';
+import { Chat } from './components/Chat';
+import { ChatProvider } from './provider/ChatProvider';
+
 
 function App() {
+
   return (
-    <PasswordProvider>
-      <div className="h-screen flex justify-center items-center bg-neutral-900 flex-col">
-        <h1 className="absolute top-0 p-4 text-xl uppercase text-neutral-800 font-bold">Password Generator</h1>
-        <div className="flex justify-center items-start flex-col w-screen max-w-96 p-4">
-          <Output />
-          <Control />
-          <GenerateBtn />
+    <>
+      <ChatProvider>
+        <div className="bg-black h-screen flex justify-center items-center">
+          <div className='w-full h-full flex flex-col justify-center max-w-2xl'>
+            <Chat />
+            <Input />
+          </div>
         </div>
-      </div>
-    </PasswordProvider>
-  );
+      </ChatProvider>
+
+    </>
+  )
 }
 
 export default App;

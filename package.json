@@ -11,7 +11,9 @@
     "prettier": "prettier --write \"src/**/*.{js,jsx,css}\""
   },
   "dependencies": {
+    "@google/genai": "^1.9.0",
     "@tailwindcss/vite": "^4.1.1",
+    "firebase": "^11.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
